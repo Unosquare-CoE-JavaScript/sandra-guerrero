@@ -1,7 +1,7 @@
 import userEvent from "@testing-library/user-event";
 import { render, screen } from "../../../test-utils/testing-library-utils";
 import Options from "../Options";
-wpw
+
 test("Update scoop subtotal when scoops change", async () => {
   render(<Options optionType="scoops" />);
 
