@@ -12,7 +12,7 @@ test("Update scoop subtotal when scoops change", async () => {
 
   // update vanilla scoops to 1 and check the subtotal
   const vanillaInput = await screen.findByRole("spinbutton", {
-    name: 'Vanilla',
+    name: "Vanilla",
   });
   userEvent.clear(vanillaInput);
   userEvent.type(vanillaInput, "1");
@@ -20,7 +20,7 @@ test("Update scoop subtotal when scoops change", async () => {
 
   // update chocolate scoops to 2 and check subtotal
   const chocolateInput = await screen.findByRole("spinbutton", {
-    name: 'Chocolate',
+    name: "Chocolate",
   });
   userEvent.clear(chocolateInput);
   userEvent.type(chocolateInput, "2");
@@ -48,19 +48,18 @@ test("update toppings subtotal when toppings change", async () => {
 });
 
 describe("grand total", () => {
-  test("grand total starts at $0.00", () => {
-    render(<OrderEntry />);
-    const grandTotal = screen.getByRole("heading", { name: /grand total: \$/i});
-    expect(grandTotal).toHaveTextContent("0.00");
-  });
-
   test("grand total updates properly if scoop is added first", async () => {
     render(<OrderEntry />);
-    const grandTotal = screen.getByRole("heading", { name: /grand total: \$/i });
+    const grandTotal = screen.getByRole("heading", {
+        name: /grand total: \$/i,
+    });
+
+    // check that the grand total starts out at 0
+    expect(grandTotal).toHaveTextContent("0.00");
     expect(grandTotal).toHaveTextContent("0.00");
 
     const vanillaInput = await screen.findByRole("spinbutton", {
-      name: 'Vanilla',
+      name: "Vanilla",
     });
     userEvent.clear(vanillaInput);
     userEvent.type(vanillaInput, "2");
@@ -80,7 +79,9 @@ describe("grand total", () => {
       name: "Cherries",
     });
     userEvent.click(cherriesCheckbox);
-    const grandTotal = screen.getByRole("heading", { name: /grand total: \$/i });
+    const grandTotal = screen.getByRole("heading", {
+      name: /grand total: \$/i,
+    });
     expect(grandTotal).toHaveTextContent("1.50");
 
     const vanillaInput = await screen.findByRole("spinbutton", {
@@ -107,7 +108,9 @@ describe("grand total", () => {
 
     userEvent.clear(vanillaInput);
 
-    const grandTotal = screen.getByRole("heading", { name: /grand total: \$/i });
+    const grandTotal = screen.getByRole("heading", {
+      name: /grand total: \$/i,
+    });
 
     expect(grandTotal).toHaveTextContent("3.50");
 
