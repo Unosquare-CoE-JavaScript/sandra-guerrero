@@ -12,12 +12,12 @@
 
 <h2>The reviewed topics are listed below</h2>
 
-### 1.1 Pure functions, currying, composition, functors, and monads
+### [1.1 Pure functions, currying, composition, functors, and monads].
 
 Course: [Hardcore Functional Programming in JavaScript, v2](https://frontendmasters.com/courses/hardcore-js-v2/).
 
 
-### 1.2 Unit Testing, Jest, Testing Library.
+### [1.2 Unit Testing, Jest, Testing Library](https://github.com/Unosquare-CoE-JavaScript/sandra-guerrero/tree/React-Testing-Library#12-unit-testing-jest-testing-library).
 
 Course: [Testing React with Jest and Testing Library](https://www.udemy.com/course/react-testing-library/).
 
