@@ -224,15 +224,17 @@ const Info = ({ info }) => {
   return <div className={styles.info}>{info}</div>
 }
 
-
+MediumClap.Icon = ClapIcon
+MediumClap.Count = ClapCount
+MediumClap.Total = CountTotal
 
 const Usage = () => {
    return (
     <div style={{ width: '100%' }}>
       <MediumClap>
-        <ClapIcon />
-        <ClapCount />
-        <CountTotal />
+        <MediumClap.Icon />
+        <MediumClap.Count />
+        <MediumClap.Total />
       </MediumClap>
     </div>
   )
