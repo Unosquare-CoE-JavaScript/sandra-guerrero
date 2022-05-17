@@ -1,0 +1,31 @@
+Advance React Patterns
+-Solve issues related to building reusable components using proven solutions
+-Development of highly cohesive components with minimal coupling
+-Better ways to share logic between components
+
+----- High-Order Components (Hoc)----------
+
+HOC is a functions that takes the component and returns another component.
+
+----------------------------------
+
+1. Compound Components Pattern 
+2. Rehusable Styles
+3. Control Props
+4. Custom Hooks
+5. Props Collection 
+6. Props Getters
+7. State reducers
+8. State initialiser
+
+UI patterns:
+Compound.- The internal components do not work without their main parent. (Share the same state, the same parent state, and the same shared parent state)
+They are useful when the user of the component does not need to worry about implementation details.
+
+Render props, extensible styles.
+it helps us create user interfaces that are maintainable and easy to extend. A component that is easy to modify.
+
+Logic Patterns: Custom HooKS, HOC, PropsGetters, Props control,
+State Initializer ( allows to expose an API to users to be able to reset your component to its original state without having to completely unmount and remount the component).
+State reducer (allows to cleanly manage our state's updates based on some criteria)
+Reuse logic between components through abstraction.
