@@ -10,13 +10,13 @@ HOC is a functions that takes the component and returns another component.
 ----------------------------------
 
 1. Compound Components Pattern 
-2. Rehusable Styles
+2. Reusable Styles
 3. Control Props
 4. Custom Hooks
 5. Props Collection 
 6. Props Getters
 7. State reducers
-8. State initialiser
+8. State initializer
 
 UI patterns:
 Compound.- The internal components do not work without their main parent. (Share the same state, the same parent state, and the same shared parent state)
