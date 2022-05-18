@@ -12,3 +12,5 @@ is a React Hooks library for data fetching. SWR first returns the data from cach
 
 If Suspense resourse fails tp load an error is theown, catch the error using an ErrorBoundary
 Error boundaries can be nested.
+
+Suspense components can be nested.
