@@ -1,0 +1,14 @@
+Concurrent Rendering Adventures in React 18
+--------------------------------------------
+
+<Suspense />
+Allows to "suspend" rendering a component whenever it has to wait for something.
+
+The fallback component will be redered
+
+SWR(stale-while-revalidate)
+is a React Hooks library for data fetching. SWR first returns the data from cache (stale), then sends the request (revalidate), and finally comes with the up-to-date data again.
+
+
+If Suspense resourse fails tp load an error is theown, catch the error using an ErrorBoundary
+Error boundaries can be nested.
