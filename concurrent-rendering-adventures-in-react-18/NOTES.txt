@@ -14,3 +14,5 @@ If Suspense resourse fails tp load an error is theown, catch the error using an 
 Error boundaries can be nested.
 
 Suspense components can be nested.
+
+Multiple suspense boundaries can suspend in parallel
