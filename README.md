@@ -22,7 +22,7 @@ Course: [Hardcore Functional Programming in JavaScript, v2](https://frontendmast
 Course: [Testing React with Jest and Testing Library](https://www.udemy.com/course/react-testing-library/).
 
 
-### [1.3 Custom Hooks, Compound Components, Reusable Styles, Control Props, Props Collections, Props Getters, State Initializer, State Reducer Pattern.](https://github.com/Unosquare-CoE-JavaScript/sandra-guerrero/tree/Advanced-React-Component-Patterns)
+### 1.3 [Custom Hooks, Compound Components, Reusable Styles, Control Props, Props Collections, Props Getters, State Initializer, State Reducer Pattern.](https://github.com/Unosquare-CoE-JavaScript/sandra-guerrero/tree/Advanced-React-Component-Patterns)
 
 Course: [The Complete Guide to Advanced React Component Patterns](https://www.udemy.com/course/the-complete-guide-to-advanced-react-patterns/).
 
