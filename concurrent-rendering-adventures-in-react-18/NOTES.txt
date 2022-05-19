@@ -24,3 +24,7 @@ New Hooks:
 *useTransition.- Avoid undesirable states when waiting for content|
 *useSyncExternalStore.- Enables React components to safely and efficiently read from mutable external source in Concurrent Mode
 *useId.- Can be used to generate unique ID's in an SSR-safe way
+
+---------------------------------------------------------
+
+<SuspenseList /> will let you control how multiple <Suspense /> components render their fallback
