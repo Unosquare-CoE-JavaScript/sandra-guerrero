@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect, useDeferredValue } from 'react';
 import { roundUp } from '../../utils/roundUp';
 import classes from './PrimeRange.module.css';
 
@@ -11,6 +11,11 @@ interface Props {
 
 export function PrimeRange({ defaultValue, onChange }: Props) {
   const [maxPrimeRange, setMaxPrimeRange] = useState(defaultValue);
+  const deferredMaxPrimeRange =useDeferredValue(maxPrimeRange)
+  useEffect(() => {
+    onChange(deferredMaxPrimeRange);
+  }, [deferredMaxPrimeRange, onChange]);
+
   const [maxPrime, setMaxPrime] = useState(() => {
     for (let i = 0; i < selectItems.length; i++) {
       if (selectItems[i] > defaultValue) {
@@ -28,7 +33,6 @@ export function PrimeRange({ defaultValue, onChange }: Props) {
         max={maxPrime}
         onChange={(e) => {
           setMaxPrimeRange(+e.target.value);
-          onChange(+e.target.value);
         }}
       />
       <select
