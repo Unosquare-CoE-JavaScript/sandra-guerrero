@@ -16,3 +16,11 @@ Error boundaries can be nested.
 Suspense components can be nested.
 
 Multiple suspense boundaries can suspend in parallel
+----------------------------------------------------
+
+New Hooks:
+
+*useDefferredValue.- Returns a deferred version of the value that may lag behind
+*useTransition.- Avoid undesirable states when waiting for content|
+*useSyncExternalStore.- Enables React components to safely and efficiently read from mutable external source in Concurrent Mode
+*useId.- Can be used to generate unique ID's in an SSR-safe way
