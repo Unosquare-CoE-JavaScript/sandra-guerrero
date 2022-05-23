@@ -1,0 +1,18 @@
+Functions
+
+-Total (For every input there is a corresponding output)
+-Deterministic (always receive the same output for a given input)
+-No Observable Side-Effects  (No observable effect besides computing a value)
+
+Advantages of pure functions
+-Reliable
+-Portable
+-Reusable
+-Testable
+-Composable
+-Properties/Contract
+
+----------------------
+Currying (instead of taking all arguments at one time ; takes one argument at a time and returns a new function expecting the next argument)
+
+Composition (chaining multiple functions together to create a new function)
