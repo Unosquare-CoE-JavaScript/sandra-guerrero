@@ -16,3 +16,8 @@ Advantages of pure functions
 Currying (instead of taking all arguments at one time ; takes one argument at a time and returns a new function expecting the next argument)
 
 Composition (chaining multiple functions together to create a new function)
+-Logging in composition (side effecty but helpful for debuging)
+const log = curry((tag, x) => (console.log(tag, x), x));
+const shout = compose(exclaim, log('tag log'));
+
+
