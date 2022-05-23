@@ -94,10 +94,16 @@ QUnit.test("Ex4: sanitizeNames", (assert) => {
 // Bonus 1:
 // Refactor availablePrices with compose.
 
-const availablePrices = function (cars) {
+const availablePrices_ = function (cars) {
   const available_cars = _.filter(_.prop("in_stock"), cars);
   return available_cars.map((x) => formatMoney(x.dollar_value)).join(", ");
 };
+
+const availablePrices = _.compose(
+  _.join(", "),
+  _.map(_.compose(formatMoney, _.prop("dollar_value"))),
+  _.filter(_.prop("in_stock"))
+);
 
 QUnit.test("Bonus 1: availablePrices", (assert) => {
   assert.deepEqual(availablePrices(CARS), "$700,000.00, $1,850,000.00");
@@ -106,11 +112,18 @@ QUnit.test("Bonus 1: availablePrices", (assert) => {
 // Bonus 2:
 // Refactor to pointfree.
 
-const fastestCar = function (cars) {
+const fastestCar_ = function (cars) {
   const sorted = _.sortBy((car) => car.horsepower, cars);
   const fastest = _.last(sorted);
   return fastest.name + " is the fastest";
 };
+
+const fastestCar = _.compose(
+  _.flip(_.concat)(" is the fastest"),
+  _.prop("name"),
+  _.last,
+  _.sortBy((car) => car.horsepower)
+);
 
 QUnit.test("Bonus 2: fastestCar", (assert) => {
   assert.equal(fastestCar(CARS), "Aston Martin One-77 is the fastest");
