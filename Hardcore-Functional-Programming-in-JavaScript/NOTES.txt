@@ -20,4 +20,5 @@ Composition (chaining multiple functions together to create a new function)
 const log = curry((tag, x) => (console.log(tag, x), x));
 const shout = compose(exclaim, log('tag log'));
 
+Functors (an object that can be mapped between objects)
 
