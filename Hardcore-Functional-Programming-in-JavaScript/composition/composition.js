@@ -14,6 +14,9 @@ console.log(add);
 // const pipe = (f, g) => (x) => g(f(x));
 
 const loudFirst = compose(toUpper, first);
-const shout = compose(exclaim, toUpper);
+// const shout = compose(exclaim, toUpper);
+const shout = compose(exclaim, loudFirst)
+
 
 console.log(shout("tears"));
+
