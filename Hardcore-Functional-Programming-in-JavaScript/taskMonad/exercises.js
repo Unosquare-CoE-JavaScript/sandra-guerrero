@@ -19,7 +19,7 @@ const getComments = post =>
 
 // Ex1: Use the result of getPost() and upperCase the title. Posts and comments are defined above and look like {title: String} and {id: Int, body: String} respectively.
 const postTitle = id => // uppercase the title of the result of getPost()
-  getPost(id)
+  getPost(id).map(post => post.title.toUpperCase())// Task(Post)
 
 
 QUnit.test("Ex1: postTitle", assert => {
@@ -32,9 +32,14 @@ QUnit.test("Ex1: postTitle", assert => {
 })
 
 
+
 // Ex2: pass in the post to getComments(), defined above, then assign the returned comments to the post
 const commentsForPost = id =>
   getPost(id)
+  .chain(post =>
+    getComments(post) // Task(comments)
+    .map(comments => Object.assign({comments}, post))
+  )
 
 QUnit.test("Ex2: commentsForPost", assert => {
   const done = assert.async();
@@ -49,9 +54,7 @@ QUnit.test("Ex2: commentsForPost", assert => {
 
 
 // Ex3: Wrap location.href in a Task to make it "pure"
-const getHref =
-  location.href // wrap me in Task
-
+const getHref = new Task((rej, res) => res(location.href)) // Task Null (Either nul Value)
 
 QUnit.test("Ex3: getHref", assert => {
   const done = assert.async();
