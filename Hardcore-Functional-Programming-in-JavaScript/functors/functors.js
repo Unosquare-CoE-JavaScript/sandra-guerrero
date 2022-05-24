@@ -4,21 +4,19 @@ const Box = (x) => ({
   fold: (f) => f(x),
 });
 
-const nextCharForNumberString_ = (str) => {
-  const trimmed = str.trim();
-  const number = parseInt(trimmed);
-  const nextNumber = number + 1;
-  return String.fromCharCode(nextNumber);
+const first = (xs) => xs[0];
+
+const halfTheFirstLargeNumber_ = (xs) => {
+  const found = xs.filter((x) => x >= 20);
+  const answer = first(found) / 2;
+  return `The answer is ${answer}`;
 };
 
-const nextCharForNumberString = (str) =>
-  Box(str)
-    .map((x) => x.trim())
-    .map((trimmed) => parseInt(trimmed, 10))
-    .map((number) => number + 1)
-    .fold(String.fromCharCode);
+const halfTheFirstLargeNumber = (xs) =>
+  Box(xs)
+    .map((arr) => arr.filter((x) => x >= 20))
+    .map((found) => first(found) / 2)
+    .fold((answer) => `The answer is ${answer}`);
 
-const result = nextCharForNumberString("  64 ");
-
-
-console.log(result);
+const res = halfTheFirstLargeNumber([1, 4, 50]);
+console.log(res);
