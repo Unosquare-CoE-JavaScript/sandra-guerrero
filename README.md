@@ -12,7 +12,7 @@
 
 <h2>The reviewed topics are listed below</h2>
 
-### [1.1 Pure functions, currying, composition, functors, and monads].
+### [1.1 Pure functions, currying, composition, functors, and monads.](https://github.com/Unosquare-CoE-JavaScript/sandra-guerrero/tree/Hardcore-Functional-Programming-in-JavaScript)
 
 Course: [Hardcore Functional Programming in JavaScript, v2](https://frontendmasters.com/courses/hardcore-js-v2/).
 
@@ -27,7 +27,7 @@ Course: [Testing React with Jest and Testing Library](https://www.udemy.com/cour
 Course: [The Complete Guide to Advanced React Component Patterns](https://www.udemy.com/course/the-complete-guide-to-advanced-react-patterns/).
 
 
-### 1.4 React 18, Performance
+### [1.4 React 18, Performance](https://github.com/Unosquare-CoE-JavaScript/sandra-guerrero/tree/concurrent-rendering-adventures-in-react-18)
 
 Course: [Concurrent Rendering Adventures in React 18](https://www.udemy.com/course/concurrent-rendering-adventures-in-react-18/).
 
