@@ -30,3 +30,19 @@ fromNullable (utility that takes a value and if is not equal to null, return rig
 	const findColor = (name) =>
   	fromNullable({ red: "#ff4444", blue: "#3b5998", yellow: "#fff68f" }[name]);
 
+Task Monad (takes a reject and resolve function, just like a Promise, but flipped)
+Lazy Promises (allow us to continue to compose and combine, without running it )
+	const {Task} = require('../types')
+
+	const testUser = {id: 2, name: 'user1'}
+
+	const Db = ({
+	  find: _id =>
+	    Task((rej, res) => res(testUser))
+	})
+
+	Db.find(3)
+	.fork(console.log, console.log)
+
+
+
