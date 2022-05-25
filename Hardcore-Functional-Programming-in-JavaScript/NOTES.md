@@ -32,8 +32,8 @@ A functional approach to Error handling,  it has a **map**, **chain**, and a **f
 
 ## fromNullable 
 Utility that takes a value and if is not equal to null, return right functor.
-	```
-const fromNullable = (x) => (x != null ? Right(x) : Left());
+```
+	const fromNullable = (x) => (x != null ? Right(x) : Left());
 
 	const findColor = (name) =>
   	fromNullable({ red: "#ff4444", blue: "#3b5998", yellow: "#fff68f" }[name]);
