@@ -42,8 +42,8 @@ Utility that takes a value and if is not equal to null, return right functor.
 ## Task Monad 
 Takes a reject and resolve function, just like a Promise, but flipped.
 Lazy Promises (_allow us to continue to compose and combine, without running it_ )
-	```
-const {Task} = require('../types')
+```
+	const {Task} = require('../types')
 
 	const testUser = {id: 2, name: 'user1'}
 
